@@ -108,8 +108,10 @@ while true do
     sleep(1)
     m.clear()
     m.setCursorPos(1, 2)
-    m.write("Insert card")
+    m.write("Total: $" .. tripfare[chosenTicketNo])
     m.setCursorPos(1, 3)
+    m.write("Insert card")
+    m.setCursorPos(1, 4)
     m.write("or press any key")
     os.pullEvent()
     if fs.exists("disk/card") and fs.exists("disk/pin") then
